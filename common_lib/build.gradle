@@ -12,6 +12,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -21,11 +27,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
-
-//configurations.all {
-//    resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
-//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -38,4 +44,5 @@ dependencies {
     api (rootProject.ext.deps.arouterapi){
         exclude module: 'support-v4'
     }
+    annotationProcessor rootProject.ext.deps.aroutercompiler
 }

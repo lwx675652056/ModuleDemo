@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.lwx.common_lib.utils.RouterPath;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnNews;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build("/module_news/NewsActivity").navigation();
+                ARouter.getInstance().build(RouterPath.ROUTER_NEWS).navigation();
             }
         });
     }

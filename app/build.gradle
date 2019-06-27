@@ -13,7 +13,7 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId "com.lwx.moduledemo"
+        applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -49,15 +49,11 @@ android {
     }
 }
 
-configurations.all {
-    resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':common_lib')
     if (!rootProject.ext.isModule) {
-        api project(':module_news')
+        implementation project(':module_news')
     }
     annotationProcessor rootProject.ext.deps.aroutercompiler
 }

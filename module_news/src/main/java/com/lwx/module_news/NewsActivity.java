@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.lwx.common_lib.utils.RouterPath;
 
-@Route(path = "/module_news/NewsActivity")
+@Route(path = RouterPath.ROUTER_NEWS)
 public class NewsActivity extends AppCompatActivity {
 
     @Override

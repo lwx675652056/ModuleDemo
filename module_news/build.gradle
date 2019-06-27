@@ -11,7 +11,7 @@ android {
     defaultConfig {
         if (rootProject.ext.isModule) {
             //组件模式下设置applicationId
-            applicationId "com.lwx.module_news"
+            applicationId rootProject.ext.android.moduleAppId_news
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -26,7 +26,7 @@ android {
                     arguments = [AROUTER_MODULE_NAME: project.getName()]
                 }
             }
-            //强制前缀
+            //强制前缀,解决资源冲突
             resourcePrefix "news_"
         }
     }
@@ -48,17 +48,11 @@ android {
             //控制两种模式下的资源和代码配置情况
             if (rootProject.ext.isModule) {
                 manifest.srcFile 'src/main/module/AndroidManifest.xml'
-                java.srcDirs = ['src/main/java', 'src/main/module/java']
-                res.srcDirs = ['src/main/res', 'src/main/module/res']
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
         }
     }
-}
-
-configurations.all {
-    resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
 }
 
 dependencies {
