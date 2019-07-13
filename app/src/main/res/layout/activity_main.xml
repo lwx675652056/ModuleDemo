@@ -8,6 +8,13 @@
     tools:context="com.lwx.moduledemo.MainActivity">
 
     <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
         android:id="@+id/btn_news"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

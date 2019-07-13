@@ -5,5 +5,6 @@ package com.lwx.common_lib.utils;
  */
 
 public class RouterPath {
+    public static final String ROUTER_LOGIN= "/module_login/LoginActivity";
     public static final String ROUTER_NEWS= "/module_news/NewsActivity";
 }

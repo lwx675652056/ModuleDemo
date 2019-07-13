@@ -30,3 +30,5 @@ gradle/
 *.apk
 gradle.properties
 local.properties
+module_news/build/
+module_login/build/

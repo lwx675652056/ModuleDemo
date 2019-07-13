@@ -55,5 +55,8 @@ dependencies {
     if (!rootProject.ext.isModule) {
         implementation project(':module_news')
     }
+    if (!rootProject.ext.isModule) {
+        implementation project(':module_login')
+    }
     annotationProcessor rootProject.ext.deps.aroutercompiler
 }

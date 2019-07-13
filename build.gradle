@@ -26,7 +26,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    isModule = true //false:作为Lib组件存在， true:作为application存在
+    isModule = false //false:作为Lib组件存在， true:作为application存在
 
     signingConfig = [
             signFile     : '../app/moduledemo.jks',
@@ -38,6 +38,7 @@ ext {
     android = [
             applicationId    : "com.lwx.moduledemo",
             moduleAppId_news : "com.lwx.module_news",
+            moduleAppId_login: "com.lwx.module_login",
 
             compileSdkVersion: 26,
             buildToolsVersion: '26.0.3',
