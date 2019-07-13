@@ -1,3 +1,3 @@
 # ModuleDemo
 效果图展示
-[p1](../gif/gif.gif)
+![图片](gif/video.gif)
